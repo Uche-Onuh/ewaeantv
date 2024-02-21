@@ -10,7 +10,6 @@ import {
   vector,
   store,
   screen,
-  cartoon,
 } from "../../assets";
 
 const Homepage = () => {
@@ -80,7 +79,7 @@ const Homepage = () => {
         </div>
       </section>
 
-      <section className="bg-white w-full pb-[-200px]">
+      <section className="bg-white w-full pb-[-200px] z-[-10]">
         <div className="flex justify-center items-center  w-[90%] mx-auto">
           <div className="w-[50%]">
             <div className="w-[25.76px] h-[23.15px] mx-auto mb-[100px]">
@@ -105,21 +104,21 @@ const Homepage = () => {
             <img
               src={phone3}
               alt="mobile"
-              className="w-[100%] h-[885.18px] ml-[-550px]  mt-[200px]"
+              className="w-[100%] h-[885.18px] ml-[-550px]  mt-[200px] z-[1]"
             />
             <img
               src={tab}
               alt="mobile"
-              className="w-[900px]  h-[885.18px] ml-[-650px] mb-[200px] "
+              className="w-[200%]  h-[885.18px] ml-[-600px] mb-[200px]"
             />
           </div>
         </div>
       </section>
 
-      <section className=" z-[-10] ">
-        <div className="flex justify-center items-center  w-[90%] mx-auto">
+      <section className="mt-[-265px] w-full bg-primary z-[-10] py-[200px]">
+        <div className="flex justify-center items-center  w-[90%] mx-auto ">
           <div className=" w-[914px] h-[685.5px]">
-            <img src={screen} alt="screen" className="w-full relative" />
+            <img src={screen} alt="screen" className="w-full" />
           </div>
           <div className=" w-[50%] text-white">
             <div className="w-[60%]">
