@@ -4,7 +4,7 @@ import { logo } from "../../assets";
 import {
   RiFacebookFill,
   RiInstagramFill,
-  RiTwitterFill,
+  RiTwitterXFill,
 } from "@remixicon/react";
 
 const Footer = () => {
@@ -17,7 +17,7 @@ const Footer = () => {
       <div className="flex justify-evenly items-center text-white gap-3">
         <RiFacebookFill size={18} color="white" className="my-icon" />
         <RiInstagramFill size={18} color="white" className="my-icon" />
-        <RiTwitterFill size={18} color="white" className="my-icon" />
+        <RiTwitterXFill size={18} color="white" className="my-icon" />
       </div>
     </div>
   );
