@@ -9,6 +9,7 @@ import vector from "./Vector.png";
 import store from "./store.png"
 import screen from "./screen.png"
 import cartoon from "./cartoon.jpg"
+import icon from "./icon.png"
 
 export {
   logo,
@@ -22,4 +23,5 @@ export {
   store,
   screen,
   cartoon,
+  icon,
 };

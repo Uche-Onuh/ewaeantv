@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   phone1,
@@ -10,9 +10,18 @@ import {
   vector,
   store,
   screen,
+  icon,
 } from "../../assets";
 
+import { faqs } from "../../constants";
+
 const Homepage = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const handleToggleAnswer = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <>
       <section className="w-full h-[80vh] bg-hero-image bg-cover bg-no-repeat bg-center relative">
@@ -130,6 +139,50 @@ const Homepage = () => {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="w-full pb-40">
+        <div className="w-[90%] text-white mx-auto text-center">
+          <h1 className="font-bold text-[48px] leading-[62.5px] mb-5">
+            Frequently Asked Questions
+          </h1>
+          <p className="font-normal text-[16px] leading-[22px] mb-20">
+            Here are some questions that have been frequently asked.
+          </p>
+        </div>
+        <div className="w-[50%] text-white mx-auto">
+          {faqs.map((faq, i) => (
+            <div
+              className="p-[40px] rounded-[8px] bg-[#090909] mb-3"
+              key={faq.id}
+            >
+              <div
+                className="flex justify-between items-center cursor-pointer"
+                onClick={() => handleToggleAnswer(i)}
+              >
+                <p className="font-bold text-[16px] leading-[22px]">
+                  {i + 1}.{faq.question}
+                </p>
+                <img
+                  src={icon}
+                  alt="faq icon"
+                  className={`transform transition-transform ${
+                    openIndex === i ? "rotate-180" : ""
+                  }`}
+                />
+              </div>
+              <div
+                className={`overflow-hidden transition-max-height duration-300 ${
+                  openIndex === i ? "max-h-[200px]" : "max-h-0"
+                }`}
+              >
+                <div className="mt-4 text-[14px]  text-[#f5f5f5]">
+                  <p className="font-medium">{faq.reply}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </>
