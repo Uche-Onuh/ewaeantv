@@ -25,7 +25,7 @@ const Homepage = () => {
   return (
     <>
       <section className="w-full h-[80vh] bg-hero-image bg-cover bg-no-repeat bg-center relative">
-        <div className="bg-gradient-to-b from-black  to-black  absolute h-[100%] w-[100%] opacity-[0.8]"></div>
+        <div className="bg-gradient-to-b from-black-opacity-50 to-black absolute h-full w-full"></div>
 
         <div className="absolute top-[70%] left-[50%] text-center translate-x-[-50%] translate-y-[-50%] text-white w-[60%] mx-auto">
           <h1 className="font-bold text-[69.73px] leading-[76.15px] mb-7">
