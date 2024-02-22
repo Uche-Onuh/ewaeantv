@@ -15,7 +15,7 @@ const MainLayoutRoutes = () => {
           <Route path="/" element={<Homepage />} />
         </Route>
       </Routes>
-      <footer>
+      <footer className="py-6">
         <Footer />
       </footer>
     </>
