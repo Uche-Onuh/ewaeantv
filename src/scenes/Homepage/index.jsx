@@ -162,7 +162,7 @@ const Homepage = () => {
                 onClick={() => handleToggleAnswer(i)}
               >
                 <p className="font-bold text-[16px] leading-[22px]">
-                  {i + 1}.{faq.question}
+                  {i + 1}.  {faq.question}
                 </p>
                 <img
                   src={icon}

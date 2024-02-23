@@ -15,9 +15,21 @@ const Footer = () => {
       </div>
 
       <div className="flex justify-evenly items-center text-white gap-3">
-        <RiFacebookFill size={18} color="white" className="my-icon" />
-        <RiInstagramFill size={18} color="white" className="my-icon" />
-        <RiTwitterXFill size={18} color="white" className="my-icon" />
+        <RiFacebookFill
+          size={18}
+          color="white"
+          className="my-icon  cursor-pointer"
+        />
+        <RiInstagramFill
+          size={18}
+          color="white"
+          className="my-icon  cursor-pointer"
+        />
+        <RiTwitterXFill
+          size={18}
+          color="white"
+          className="my-icon  cursor-pointer"
+        />
       </div>
     </div>
   );

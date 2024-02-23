@@ -6,10 +6,13 @@ import phone3 from "./phone3.png";
 import vr from "./vr.png";
 import tab from "./tab.png";
 import vector from "./Vector.png";
-import store from "./store.png"
-import screen from "./screen.png"
-import cartoon from "./cartoon.jpg"
-import icon from "./icon.png"
+import store from "./store.png";
+import screen from "./screen.png";
+import cartoon from "./cartoon.jpg";
+import icon from "./icon.png";
+import apple from "./apple.png";
+import google from "./google.png";
+import facebook from "./facebook.png";
 
 export {
   logo,
@@ -24,4 +27,7 @@ export {
   screen,
   cartoon,
   icon,
+  apple,
+  facebook,
+  google,
 };

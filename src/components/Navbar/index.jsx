@@ -9,11 +9,14 @@ const Navbar = () => {
         <img src={logo} alt="logo" className="w-[100%] h-[100%]" />
       </div>
       <div className="flex justify-center items-center gap-8">
-        <Link className="text-white font-normal text-[16px] leading-[20.83px]">
+        <Link
+          className="text-white font-normal text-[16px] leading-[20.83px]"
+          to={"/user-account/login"}
+        >
           Sign In
         </Link>
         <button className="text-white bg-secondary py-[10px] px-[16px] rounded-[8px] font-normal text-[16px] leading-[20.83px]">
-          Create an account
+          <Link to={"/user-account/signup"}>Create an account</Link>
         </button>
       </div>
     </div>

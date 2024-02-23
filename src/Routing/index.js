@@ -1,3 +1,4 @@
 import MainLayoutRoutes from "./MainLayout";
+import Authentication from "./Authentication";
 
-export { MainLayoutRoutes };
+export { MainLayoutRoutes, Authentication };
