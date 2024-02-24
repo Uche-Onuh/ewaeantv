@@ -24,3 +24,17 @@ export const signupSchema = yup.object().shape({
         : field
     ),
 });
+
+export const loginSchema = yup.object().shape({
+  email: yup
+    .string()
+    .email("Must be a valid email")
+    .max(255)
+    .required("Email is required"),
+  password: yup
+    .string()
+    .required("Password is required")
+    // check minimum characters
+    .min(8, "Password must have at least 8 characters")
+    .max(100),
+});

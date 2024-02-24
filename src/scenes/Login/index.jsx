@@ -2,7 +2,7 @@ import React from "react";
 import { Dark } from "../../components";
 import { Link } from "react-router-dom";
 import { Formik } from "formik";
-import { signupSchema } from "../../Validation";
+import { loginSchema } from "../../Validation";
 import { apple, facebook, google } from "../../assets";
 
 const initialValues = {
@@ -35,14 +35,14 @@ const Login = () => {
               Hey 👋 , User
             </h1>
             <p className="font-normal text-[16px] leading-[21.79px]">
-              Welcome back!  Please, sign in to continue
+              Welcome back! Please, sign in to continue
             </p>
           </div>
 
           <Formik
             onSubmit={handleFormSubmit}
             initialValues={initialValues}
-            validationSchema={signupSchema}
+            validationSchema={loginSchema}
           >
             {({
               values,
@@ -67,8 +67,6 @@ const Login = () => {
                     onChange={handleChange}
                     value={values.email}
                     name="email"
-                    error={!!touched.email && errors.email}
-                    helperText={touched.email && errors.email}
                     className="w-[75%] px-[21px] py-[15px] outline-none bg-[#FAFAFA] rounded-[10px] text-[16px] font-normal leading-[20.8px] mb-5"
                   />
                 </div>
@@ -85,8 +83,6 @@ const Login = () => {
                     onChange={handleChange}
                     value={values.password}
                     name="password"
-                    error={!!touched.password && errors.password}
-                    helperText={touched.password && errors.password}
                     className="w-[75%] px-[21px] py-[15px] outline-none bg-[#FAFAFA] rounded-[10px] text-[16px] font-normal leading-[20.8px] mb-5"
                   />
                 </div>

@@ -69,8 +69,6 @@ const Signup = () => {
                     onChange={handleChange}
                     value={values.name}
                     name="name"
-                    error={!!touched.name && errors.name}
-                    helperText={touched.name && errors.name}
                     className="w-[75%] px-[21px] py-[15px] outline-none bg-[#FAFAFA] rounded-[10px] text-[16px] font-normal leading-[20.8px] mb-5"
                   />
                 </div>
@@ -87,8 +85,6 @@ const Signup = () => {
                     onChange={handleChange}
                     value={values.email}
                     name="email"
-                    error={!!touched.email && errors.email}
-                    helperText={touched.email && errors.email}
                     className="w-[75%] px-[21px] py-[15px] outline-none bg-[#FAFAFA] rounded-[10px] text-[16px] font-normal leading-[20.8px] mb-5"
                   />
                 </div>
@@ -105,8 +101,6 @@ const Signup = () => {
                     onChange={handleChange}
                     value={values.password}
                     name="password"
-                    error={!!touched.password && errors.password}
-                    helperText={touched.password && errors.password}
                     className="w-[75%] px-[21px] py-[15px] outline-none bg-[#FAFAFA] rounded-[10px] text-[16px] font-normal leading-[20.8px] mb-5"
                   />
                 </div>
@@ -123,8 +117,6 @@ const Signup = () => {
                     onChange={handleChange}
                     value={values.confPassword}
                     name="confPassword"
-                    error={!!touched.confPassword && errors.confPassword}
-                    helperText={touched.confPassword && errors.confPassword}
                     className="w-[75%] px-[21px] py-[15px] outline-none bg-[#FAFAFA] rounded-[10px] text-[16px] font-normal leading-[20.8px]"
                   />
                 </div>
