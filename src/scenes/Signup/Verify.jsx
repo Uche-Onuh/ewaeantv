@@ -19,6 +19,13 @@ const Verify = () => {
     }
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const verificationCode = codes.join("");
+    console.log("Submitting verification code:", verificationCode);
+    // Add your logic for submitting the verification code here
+  };
+
   return (
     <section className="flex justify-center items-center h-[100vh]">
       <Dark />
@@ -36,7 +43,7 @@ const Verify = () => {
           <h1 className="mb-10 font-bold text-[24px] leading-[31.25px]">
             Verify your mail
           </h1>
-          <form action="">
+          <form onSubmit={handleSubmit}>
             <div className="flex justify-center items-center space-x-4 mb-10">
               {codes.map((code, index) => (
                 <input
@@ -67,7 +74,8 @@ const Verify = () => {
           </form>
 
           <p className="w-4/5 mx-auto font-normal text-[16px] leading-5 mt-6 text-left pl-6">
-            Didn’t get pin? <span className="font-bold cursor-pointer">Resend</span>
+            Didn’t get pin?{" "}
+            <span className="font-bold cursor-pointer">Resend</span>
           </p>
         </div>
       </div>

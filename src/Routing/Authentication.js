@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Signup, Login, Verify } from "../scenes";
+import { Signup, Login, Verify, Preference } from "../scenes";
 import Layout from "./Layout";
 
 const Authentication = () => {
@@ -11,6 +11,7 @@ const Authentication = () => {
           <Route path="signup" element={<Signup />} />
           <Route path="login" element={<Login />} />
           <Route path="verify-email" element={<Verify />} />
+          <Route path="preference" element={<Preference />} />
         </Route>
       </Routes>
     </>
