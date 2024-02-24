@@ -1,11 +1,14 @@
 import React from "react";
 import { logo } from "../assets";
+import { Link } from "react-router-dom";
 
 const Dark = () => {
   return (
     <div className="w-1/2 flex flex-col p-[50px] h-[100%] justify-between">
       <div className="w-[90px]">
-        <img src={logo} alt="logo" className="w-full" />
+        <Link to={"/"}>
+          <img src={logo} alt="logo" className="w-full" />
+        </Link>
       </div>
 
       <div className="flex justify-start gap-3">

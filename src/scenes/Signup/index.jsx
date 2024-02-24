@@ -12,11 +12,12 @@ const initialValues = {
   confPassword: "",
 };
 
-const handleFormSubmit = (values) => {
-  console.log(values);
-};
-
 const Signup = () => {
+  const handleFormSubmit = (values, { setSubmitting }) => {
+    console.log(values);
+    setSubmitting(false);
+  };
+
   return (
     <section className="flex justify-center items-center h-[100vh]">
       <Dark />
@@ -36,7 +37,7 @@ const Signup = () => {
               Hey 👋 , User
             </h1>
             <p className="font-normal text-[16px] leading-[21.79px]">
-              Welcome back! Please, sign in to continue
+              Welcome! Please, create an account to continue
             </p>
           </div>
 
@@ -52,9 +53,15 @@ const Signup = () => {
               handleBlur,
               handleChange,
               handleSubmit,
+              isSubmitting,
             }) => (
               <form onSubmit={handleSubmit}>
                 <div className="w-full">
+                  {errors.name && touched.name && (
+                    <p className="text-red-500 text-xs mb-1 font-bold">
+                      {errors.name}
+                    </p>
+                  )}
                   <input
                     type="text"
                     placeholder="Name"
@@ -68,6 +75,11 @@ const Signup = () => {
                   />
                 </div>
                 <div className="w-full">
+                  {errors.email && touched.email && (
+                    <p className="text-red-500 text-xs mb-1 font-bold">
+                      {errors.email}
+                    </p>
+                  )}
                   <input
                     type="email"
                     placeholder="Email Address"
@@ -81,26 +93,36 @@ const Signup = () => {
                   />
                 </div>
                 <div className="w-full">
+                  {errors.password && touched.password && (
+                    <p className="text-red-500 text-xs mb-1 font-bold">
+                      {errors.password}
+                    </p>
+                  )}
                   <input
-                    type="text"
+                    type="password"
                     placeholder="Password"
                     onBlur={handleBlur}
                     onChange={handleChange}
                     value={values.password}
-                    name="name"
+                    name="password"
                     error={!!touched.password && errors.password}
                     helperText={touched.password && errors.password}
                     className="w-[75%] px-[21px] py-[15px] outline-none bg-[#FAFAFA] rounded-[10px] text-[16px] font-normal leading-[20.8px] mb-5"
                   />
                 </div>
                 <div className="w-full">
+                  {errors.confPassword && touched.confPassword && (
+                    <p className="text-red-500 text-xs mb-1 font-bold">
+                      {errors.confPassword}
+                    </p>
+                  )}
                   <input
-                    type="text"
+                    type="password"
                     placeholder="Confirm Password"
                     onBlur={handleBlur}
                     onChange={handleChange}
                     value={values.confPassword}
-                    name="name"
+                    name="confPassword"
                     error={!!touched.confPassword && errors.confPassword}
                     helperText={touched.confPassword && errors.confPassword}
                     className="w-[75%] px-[21px] py-[15px] outline-none bg-[#FAFAFA] rounded-[10px] text-[16px] font-normal leading-[20.8px]"
@@ -109,9 +131,10 @@ const Signup = () => {
 
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className="bg-secondary text-white w-[75%] rounded-[10px] py-[15px] px-[21px] text-[16px] leading-[20.83px] font-normal my-6"
                 >
-                  Get started
+                  {isSubmitting ? "Submitting..." : "Get started"}
                 </button>
               </form>
             )}
@@ -135,15 +158,15 @@ const Signup = () => {
 
           <div className="w-[70%]">
             <div className="flex justify-center items-center gap-10">
-              <div>
+              <div className="cursor-pointer">
                 <img src={google} alt="google icon" />
               </div>
 
-              <div>
+              <div className="cursor-pointer">
                 <img src={apple} alt="google icon" />
               </div>
 
-              <div>
+              <div className="cursor-pointer">
                 <img src={facebook} alt="google icon" />
               </div>
             </div>
