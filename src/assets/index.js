@@ -13,6 +13,8 @@ import icon from "./icon.png";
 import apple from "./apple.png";
 import google from "./google.png";
 import facebook from "./facebook.png";
+import acc1 from "./acc1.jpg"
+import acc2 from "./cryptopunk.png"
 
 export {
   logo,
@@ -30,4 +32,6 @@ export {
   apple,
   facebook,
   google,
+  acc1,
+  acc2,
 };
