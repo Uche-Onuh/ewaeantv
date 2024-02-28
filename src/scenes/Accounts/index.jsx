@@ -1,7 +1,6 @@
 import React from "react";
-import { logo } from "../../assets";
 import { RiPencilFill, RiAddFill } from "@remixicon/react";
-import { acc1, acc2 } from "../../assets";
+import { logo, acc1, acc2 } from "../../assets";
 
 const index = () => {
   return (
@@ -58,16 +57,12 @@ const index = () => {
 
       <div className="text-white relative z-10 flex items-center justify-center flex-col gap-20 mt-[30%] font-normal leading-5 text-[16px] italic">
         <h1>
-          You can <span className="text-secondary"> add max of 5</span>{" "}
-          account to your already existing account
+          You can <span className="text-secondary"> add max of 5</span> account
+          to your already existing account
         </h1>
 
         <div className="bg-secondary rounded-full p-5">
-          <RiAddFill
-            size={50}
-            color="white"
-            className="cursor-pointer"
-          />
+          <RiAddFill size={50} color="white" className="cursor-pointer" />
         </div>
       </div>
     </section>
